@@ -1,4 +1,6 @@
 # prostep-vision-system
+**Português** | 🇺🇸 [English](README_EN.md)
+
 ProStep Vision System (Modelo de Exemplo)
 📌 Sobre o Projeto
 
