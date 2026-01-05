@@ -1,129 +1,108 @@
 ProStep Vision System
 **English** | 🇧🇷 [Português](README.md)
 
-⚠️ Important Notice
-This repository contains a functional prototype / reference model created to demonstrate the core concepts of a larger industrial quality control system.
-It is not the final production system, but a simplified version intended for study, demonstration, and future expansion.
+ProStep Vision System is a functional web system prototype developed to demonstrate quality control through step-based verification in industrial processes.
 
-The complete project concept, business rules, and operational vision are described in detail in the PDF documentation available in the docs/ folder.
+This project is not the final system, but rather a conceptual and technical proof of concept, created to:
 
-📌 Project Overview
+Validate business rules
 
-ProStep Vision System is a web-based quality control model designed to monitor and validate production steps in an industrial environment.
+Demonstrate step-by-step control flows
 
-The system simulates a Gate & Step validation flow, where each production step must confirm its checklist in sequence, allowing supervisors (Gate) to monitor progress, identify gaps, and ensure process compliance.
+Serve as a foundation for future expansion into a larger system
 
-🎯 Project Objectives
+The complete project vision, business context, and functional scope are documented in the PDF files available in the /docs
+ folder.
 
-Demonstrate a step-by-step quality validation workflow
+🎯 Purpose
 
-Ensure sequential confirmation of production steps
+To demonstrate, in a practical way, how a system can:
 
-Provide real-time visibility of production gaps
+Control confirmations per Step
 
-Offer a shift-based dashboard with performance indicators
+Detect sequence gaps between steps
 
-Serve as a foundation model for a scalable industrial system
+Centralize validations in a Gate control panel
 
-🧠 Key Concepts
+Generate shift-based performance indicators
 
-Gate
-Central control panel responsible for:
+Serve as a foundation for a larger corporate-quality system
 
-Starting and ending shifts
+🧩 System Structure
+🔹 STEP (Operation)
 
-Defining production targets
+Mandatory checklist per step
 
-Monitoring step confirmations
+Confirmation allowed only after full checklist interaction
 
-Identifying missing or skipped steps
+Visual status indicators:
 
-Generating shift reports
+🟢 Confirmed
 
-Step (Operation)
-Individual production stations responsible for:
+🔴 Pending (when a gap exists)
 
-Completing mandatory checklists
+🟠 In progress
 
-Confirming their operation only after all checklist items are validated
+🔹 GATE (Central Control)
 
-Respecting the production sequence logic
+Shift start and end control
 
-Shift-Based Control
+Dynamic shift target (goal) definition
 
-Each shift has a configurable production target
+Real-time visualization of confirmations
 
-Completion percentage is calculated per step, not per serial number
+Automatic detection of missing steps
 
-Data is reset only when the shift is officially closed
+Dashboard consolidated by Step, not by serial number
 
-📊 Dashboard Logic
+📊 Shift Dashboard
 
-The shift dashboard is based on step completion, not serial continuity.
+The dashboard was designed to reflect real operational logic, considering:
 
-100% completion means:
+Shift target applied independently of serial numbers
 
-Every step reached its production target
+Completion calculated based on:
 
-Independent of which serial numbers were used
+Number of confirmations per Step
 
-This approach ensures:
+Expected total = target × number of steps
 
-Accurate performance tracking
+Automatic updates when:
 
-No distortion when serial numbers cross shifts
+The shift target changes
 
-🗂️ Documentation
+Steps are confirmed
 
-The full system concept is documented in the following files:
+Pending steps are corrected via Gate
 
-📄 Portuguese (PT-BR)
+📁 Project Structure
+prostep/
+│
+├── css/          # System styles
+├── js/           # System logic (Gate, Step, Sessions)
+├── pages/        # HTML pages
+├── data/         # Auxiliary data (JSON)
+├── docs/         # Project documentation (PDF PT-BR and EN)
+│
+├── README.md     # Documentation in Portuguese
+├── README_EN.md  # Documentation in English
+
+📄 Project Documentation
+
+The complete conceptual and functional documentation is available at:
+
+📘 Portuguese:
 docs/Sistema de Qualidade por Conferência.pdf
 
-📄 English (EN)
+📗 English:
 docs/System_Quality_Conference_SQC_EN.pdf
 
-These documents describe:
+These documents describe the larger system vision, of which this repository represents only a demonstration model.
 
-Business rules
+⚠️ Important Notice
 
-Operational flow
-
-Future scalability vision
-
-System responsibilities
-
-🛠️ Technologies Used
-
-HTML5
-
-CSS3
-
-Vanilla JavaScript
-
-LocalStorage (state simulation)
-
-SessionStorage (session control)
-
-No backend is used in this prototype.
-All logic is implemented on the client side for demonstration purposes.
-
-🚀 Purpose of This Repository
-
-This repository exists to:
-
-Serve as a reference architecture
-
-Demonstrate logic and UX concepts
-
-Support discussions with stakeholders
-
-Act as a base for future backend integration
-
-📌 Disclaimer
-
-This project is a conceptual and educational model.
-It should be adapted, secured, and expanded before any production use.
+This repository is a demo / proof-of-concept project.
+It was developed for study, validation of ideas, and technical demonstration, and should not be used directly in production environments without proper adaptations.
 
 👤 Author
 
