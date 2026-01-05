@@ -1,149 +1,109 @@
 # prostep-vision-system
 **Português** | 🇺🇸 [English](README_EN.md)
 
-ProStep Vision System (Modelo de Exemplo)
-📌 Sobre o Projeto
+O ProStep Vision System é um modelo funcional de sistema web desenvolvido para controle de qualidade por conferência de etapas (steps) em processos industriais.
 
-O ProStep Vision System é um modelo funcional de exemplo (Proof of Concept) desenvolvido para demonstrar a lógica, o fluxo e a viabilidade técnica de um sistema maior de qualidade industrial por conferência de montagem.
+Este projeto não representa o sistema final, mas sim um protótipo conceitual e técnico, criado para:
 
-⚠️ Importante:
-Este repositório NÃO representa o sistema final em produção.
-Ele foi criado exclusivamente como modelo didático e demonstrativo, servindo como base para evolução de um projeto corporativo mais robusto.
+Validar regras de negócio
 
-O projeto completo e conceitual está descrito no documento:
+Demonstrar fluxo de controle por etapas
 
-Sistema de Qualidade por Conferência (SQC)
-Autor: Rafael Lopes Ferreira
+Servir como base de estudo e expansão para um projeto maior
 
-🎯 Objetivo do Modelo
+O projeto completo, com visão de negócio, requisitos e escopo ampliado, está documentado nos PDFs disponíveis na pasta /docs
+.
+
+🎯 Objetivo
 
 Demonstrar, de forma prática, como um sistema pode:
 
-Garantir conferência de montagem por step
+Controlar confirmações por Step
 
-Identificar falhas de processo (buracos entre steps)
+Identificar falhas de sequência (buracos entre steps)
 
-Fornecer visibilidade em tempo real ao Gate da Qualidade
+Centralizar validações em um painel Gate
 
-Registrar confirmações por matrícula, step e série
+Gerar indicadores de conclusão por turno
 
-Apoiar a tomada de decisão no controle de qualidade
+Servir como base para um sistema corporativo maior
 
-🧩 Escopo Deste Repositório
+🧩 Estrutura do Sistema
+🔹 STEP (Operação)
 
-Este modelo contempla:
+Checklist obrigatório por etapa
 
-Interface Web (HTML + CSS + JavaScript)
+Confirmação apenas após interação completa
 
-Controle de acesso por perfil:
+Indicadores visuais de status:
 
-STEP (operadores)
+🟢 Confirmado
 
-GATE (qualidade)
+🔴 Pendência (quando há buraco)
 
-Controle de turno
+🟠 Em andamento
 
-Meta de produção por turno
+🔹 GATE (Controle Central)
 
-Dashboard com indicadores em tempo real
+Início e encerramento de turno
 
-Sinalização visual:
+Definição dinâmica da meta do turno
 
-🟢 Step conferido
+Visualização em tempo real das confirmações
 
-🔴 Step não conferido (buraco no processo)
+Identificação automática de falhas entre steps
 
-Histórico básico de confirmações em memória local (LocalStorage)
+Dashboard consolidado por Step, não por série
 
-🔄 Fluxo Demonstrado no Sistema
+📊 Dashboard do Turno
 
-Operador faz login informando:
+O dashboard foi projetado para refletir a realidade operacional, considerando:
 
-Matrícula
+A meta do turno aplicada independentemente da série
 
-Número de série
+A conclusão baseada em:
 
-Step de atuação
+Quantidade de confirmações por Step
 
-O sistema exibe o checklist do step
+Total esperado = meta × número de steps
 
-Após conferência, o operador confirma o step
+Atualização automática ao:
 
-O Gate da Qualidade acompanha:
+Alterar a meta
 
-Confirmações em tempo real
+Confirmar steps
 
-Falhas entre steps
+Corrigir pendências via Gate
 
-Evolução do turno
+📁 Estrutura do Projeto
+prostep/
+│
+├── css/          # Estilos do sistema
+├── js/           # Lógica do sistema (Gate, Step, Sessões)
+├── pages/        # Páginas HTML
+├── data/         # Dados auxiliares (JSON)
+├── docs/         # Documentação do projeto (PDF PT-BR e EN)
+│
+├── README.md     # Documentação em Português
+├── README_EN.md  # Documentation in English
 
-Ao encerrar o turno:
+📄 Documentação do Projeto
 
-As informações são consolidadas
+A documentação conceitual e funcional completa está disponível em:
 
-O turno é finalizado para novo ciclo
+📘 Português:
+docs/Sistema de Qualidade por Conferência.pdf
 
-🧠 Projeto Maior (Visão Conceitual – SQC)
+📗 English:
+docs/System_Quality_Conference_SQC_EN.pdf
 
-Este modelo é inspirado e baseado no projeto Sistema de Qualidade por Conferência (SQC), que em sua versão completa prevê:
+Esses documentos descrevem o projeto maior, do qual este repositório é apenas um modelo demonstrativo.
 
-Backend integrado a ERP / MES
+⚠️ Aviso Importante
 
-Banco de dados relacional para rastreabilidade
-
-Alertas automáticos (WhatsApp, e-mail)
-
-Relatórios automáticos por turno, série e funcionário
-
-Histórico permanente de qualidade
-
-Acompanhamento por Team Leader e Qualidade
-
-Redução de defeitos recorrentes por step
-
-📄 Consulte o PDF do projeto SQC para a visão completa do sistema.
-
-🛠️ Tecnologias Utilizadas (Modelo)
-
-HTML5
-
-CSS3
-
-JavaScript (Vanilla)
-
-LocalStorage (apenas para simulação)
-
-Layout responsivo
-
-🚧 Limitações Conhecidas
-
-Por se tratar de um modelo de exemplo, este projeto:
-
-Não utiliza backend
-
-Não possui banco de dados real
-
-Não possui autenticação segura
-
-Não envia alertas reais
-
-Não deve ser utilizado diretamente em ambiente produtivo
-
-🚀 Próximos Passos (Evolução Natural)
-
-Implementação de backend (Node.js / Java / .NET)
-
-Integração com banco de dados
-
-APIs para alertas automáticos
-
-Relatórios exportáveis (Excel / PDF)
-
-Controle de permissões por perfil
-
-Auditoria completa de qualidade
+Este repositório é um projeto de exemplo / prova de conceito.
+Ele foi desenvolvido para estudo, validação de ideias e demonstração técnica, não devendo ser utilizado diretamente em ambiente produtivo sem adaptações.
 
 👤 Autor
 
 Rafael Lopes Ferreira
-Projeto desenvolvido como estudo, protótipo funcional e base para evolução de um sistema corporativo de qualidade.
