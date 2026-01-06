@@ -1,4 +1,7 @@
 🧑‍🏭 Acesso ao Painel de STEP (Operação)
+
+Acesse:
+https://prostepvision-system.vercel.app/
 ✔️ Quem deve usar
 
 Operadores responsáveis pela execução de um Step específico do processo produtivo.
@@ -130,5 +133,6 @@ Selecione um Step
 Confirmar Steps na aba de operação
 
 Visualizar imediatamente as confirmações no painel GATE
+
 
 Acompanhar o dashboard sendo atualizado em tempo real
