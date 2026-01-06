@@ -2,6 +2,7 @@
 
 Acesse:
 https://prostepvision-system.vercel.app/
+
 ✔️ Quem deve usar
 
 Operadores responsáveis pela execução de um Step específico do processo produtivo.
@@ -136,3 +137,4 @@ Visualizar imediatamente as confirmações no painel GATE
 
 
 Acompanhar o dashboard sendo atualizado em tempo real
+
